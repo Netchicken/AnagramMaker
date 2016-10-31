@@ -72,7 +72,7 @@ namespace Dictionary_words
         private async Task CreateAnagrams(string phrase)
         {
             //https://www.dotnetperls.com/async 
-            var GeneratedAnagrams =
+            var GeneratedAnagrams = 
                  await Task.Run(() => phrase.Split(' ').CartesianProduct().Select(s => string.Join("", s)).ToList());
 
             AnagramDTO.ListboxAnagramPhrases.Items.Add("Inputting " + txtInputWord.Text);
